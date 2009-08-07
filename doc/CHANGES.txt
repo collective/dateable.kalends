@@ -1,0 +1,16 @@
+;-*-rst-*-
+
+=========================
+dateable.kalends Changes
+=========================
+
+dateable.kalends 0.4 (2008-10-04)
+=================================
+
+* Version update to keep track with dateable.chronos.
+
+
+dateable.kalends 0.3 (2008-07-09)
+=================================
+
+* Added IEvent marker interface. 
