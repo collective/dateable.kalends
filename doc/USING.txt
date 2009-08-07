@@ -1,0 +1,47 @@
+Using Kalends
+=============
+
+If you have a calendaring product that provides a Kalends interface and you
+want to extend the product with views or searching or exports, this file
+explains how to be an "event user".
+
+Basic Concepts
+--------------
+Kalends uses of the Component Architecture, which makes heavy use of a concept
+of interfaces and adapters. An interface in this sense is a contract between
+anb object and it's users. Basically the object promises to implement a
+certain set of methods and attributes, defined in the interface. An adapter
+is an object that implements an interface for an object that does not implement
+it.
+
+For example, I may have an iCalendar file. If I just open this file, the file
+handler will of course not know anything about the contents of this file or 
+how to interpret it as events. If I then write an object that does understand
+the iCalendar specification and can extract the events from it, this object
+is an adapter.
+
+The interfaces
+--------------
+The most important interfaces in Kalends is IEventProvider, IEvent and
+IOccurrence (interfaces names traditionally start with I). The IEventProvider 
+is the interface you use to get the events to display or export. To use it
+you must first make sure that your source of events really implement this 
+interface. You do this in the following way:
+
+    from dateable import kalends
+    event_provider = kalends.IEventProvider(eventsource)
+
+This will check if your eventsource implements IEventProvider, and if it
+doesn't, it will try to find an adapter for your source of events and the 
+IEventProvider interface. (For more information on how this works, see
+PROVIDING.txt and the documentation for the Component Architecture). For
+example, the eventsource could be a icalendar file. The file object that
+you get when opening the file will of course in itself not be an event 
+provider or know anything about events, but the adapter would.
+
+You can then ask the event provider for the events:
+
+    events = event_provider.getEvents()
+
+Which would return a list of events.
+
