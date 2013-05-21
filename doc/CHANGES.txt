@@ -1,8 +1,11 @@
-;-*-rst-*-
-
 =========================
 dateable.kalends Changes
 =========================
+
+dateable.kalends 1.0 (Unreleased)
+=================================
+
+* Updated the metadata.
 
 dateable.kalends 0.5 (2009-05-03)
 =================================
