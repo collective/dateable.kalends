@@ -1,1 +1,4 @@
 recursive-include doc *.txt
+
+# added by check_manifest.py
+include *.txt
