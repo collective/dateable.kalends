@@ -3,11 +3,11 @@ import sys, os
 
 version = '0.5'
 
-f = open('doc/README.txt')
+f = open('README.txt')
 readme = f.read()
 f.close()
 
-f = open('doc/CHANGES.txt')
+f = open('CHANGES.txt')
 changes = f.read()
 f.close()
 
@@ -26,7 +26,7 @@ setup(name='dateable.kalends',
       keywords='Dateable Calendaring calendar event icalendar',
       author='Lennart Regebro',
       author_email='regebro@gmail.com',
-      url='http://plone.org/products/dateable',
+      url='https://github.com/collective/dateable.kalends',
       license='GPL',
       packages=find_packages(exclude=['ez_setup']),
       namespace_packages=['dateable'],
