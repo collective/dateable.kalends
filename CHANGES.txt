@@ -2,8 +2,8 @@
 dateable.kalends Changes
 =========================
 
-dateable.kalends 1.0 (Unreleased)
-=================================
+1.0 (2013-05-21)
+================
 
 * Updated the metadata.
 
